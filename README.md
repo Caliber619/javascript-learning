@@ -1,2 +1,3 @@
-# js-hindi-youtube
-A code repo for javascript series at chai aur code channel
+# javascript-learning
+A code repo for javascript series
+reference- chai or code
