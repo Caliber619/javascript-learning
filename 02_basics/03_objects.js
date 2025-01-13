@@ -10,7 +10,7 @@
 
 
 //objects me key:value pair se chalta hai kaam
-const mySym = Symbol("key1")
+const mySym = Symbol("key1") //symbol hai type
 const jsUser = {
     name: "Kshitij",
     [mySym]: "mykey1",              //important
@@ -39,7 +39,7 @@ jsUser.greeting = function(){
 
 }
 jsUser.greeting2 = function(){
-    console.log(`hello world, ${this.name}`)
+    console.log(`hello world, ${this.name}`)  //jsUSer ka kaunsa object use krna hai isiliye 'this' use kia refer krne ke liye
 
 }
 
