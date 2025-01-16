@@ -1,3 +1,4 @@
+//++++++++++++++++++ these loops are for arrays +++++++++++++++++++++++
 // for of
 
 // ["", "", ""]
@@ -5,7 +6,7 @@
 
 const arr = [1, 2, 3, 4, 5]
 
-for (const num of arr) {
+for (const num of arr) {  // similarly to for-each loop ----------------
     //console.log(num);
 }
 
@@ -34,7 +35,7 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
+// for (const [key, value] of myObject) {     //this is not working(for objects)
 //     console.log(key, ':-', value);
     
 // }
