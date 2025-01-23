@@ -33,5 +33,5 @@ From Beginner to Advanced: The code examples range from basic to more complex to
 If you have suggestions or improvements for the code, feel free to fork the repository and submit a pull request. Your contributions and feedback are always welcome!
 
 # Contact
-LinkedIn profile: [LinkedIn](www.linkedin.com/in/kshitij-dev-496860247), mail at: [Gmail](yadav.d.kshitij2003@gmail.com)
+LinkedIn profile: (www.linkedin.com/in/kshitij-dev-496860247), mail at: (yadav.d.kshitij2003@gmail.com)
    
