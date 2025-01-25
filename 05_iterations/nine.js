@@ -1,2 +1,3 @@
 //reduce
 
+console.log("Hello")
