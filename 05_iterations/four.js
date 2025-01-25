@@ -1,3 +1,5 @@
+// objects to iterate karskte hai for in loop se
+
 const myObject = {
     js: 'javascript',
     cpp: 'C++',
@@ -7,7 +9,8 @@ const myObject = {
 
 //(for in ) loop-  similar to (for of)
 for (const key in myObject) {
-    //console.log(`${key} shortcut is for ${myObject[key]}`);
+    // console.log(`${key} shortcut is for ${myObject[key]}`);
+    // console.log(`${key} is the key for ${myObject[key]}`)
 }
 
 const programming = ["js", "rb", "py", "java", "cpp"]
@@ -16,13 +19,13 @@ for (const key in programming) {
     //console.log(programming[key]);
 }
 
-// const map = new Map()
-// map.set('IN', "India")
-// map.set('USA', "United States of America")
-// map.set('Fr', "France")
-// map.set('IN', "India")
+const map = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "France")
+map.set('IN', "India")
 
-// for (const key in map) {
-//     console.log(key);
-// }
+for (const key in map) {
+    console.log(key);
+}
 
