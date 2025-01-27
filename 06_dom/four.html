@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom ki Baat</title>
+</head>
+<body style="background-color: #212121; color: lightgreen;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    //ab upper jo list item add karaya hai manually uske aur bhi tarike ho skte hai and lets make a funciton for it
+    function addLanguage(langName){
+        const li = document.createElement('li'); //ek list element banaya
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("typeScript")
+//---- this was a fairly good way of doing things because there is only one list item and tree traversal is low 
+//---- so let's see a optimize approach
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))    //appendChild is better than innerHTML
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('ruby')
+
+//-----  lets try to change values 
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+                //--now we have to change
+    // secondLang.innerHtML = "MOJO"       //--not optimized
+    const newLi = document.createElement('li')
+    newLi.textContent = "JOJO"   //now to add it in the doc
+    secondLang.replaceWith(newLi)
+
+    //edit - replacing
+    const firstLang = document.querySelector("li:nth-child(1)")
+    firstLang.outerHTML = '<li> rust </li>'    //outerHTML is another way
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove();      //element will be removed
+
+
+</script>
+
+</html>
