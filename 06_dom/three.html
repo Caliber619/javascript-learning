@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2t</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <h1>hey stellar</h1>
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);   //but abhi ye webPage pe nahi dikhega
+    div.className = "main"
+    // div.id = "myId"
+    div.id = Math.round(Math.random()*10 + 1)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "Teal"
+    div.style.padding = "12px"
+    // div.innerText = "Stellar - D"    //instead of this lets create our own node and then we add it in the div
+    const addText = document.createTextNode("Stellar - D")
+    div.appendChild(addText)
+    //but idhar tak vo dikhega nahi screen pe kyuki ye sirf memory me hai and attachned nahi hai document me
+    //let's see how to do that
+    document.body.appendChild(div)
+
+    //ab ye div ban gya hai and now we can do various operations on it
+</script>
+</html>
