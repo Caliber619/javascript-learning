@@ -63,3 +63,30 @@ form.addEventListener('submit',function(e){
 })
 
 ```
+
+# Project Clock
+
+```javascript
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+// let date = new Date();
+// console.log(date.toLocaleTimeString());
+
+//koi ek method dedo and kitne interval ke baad constantly repeat krna h mujhe
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());  //document me chalana h console me nahi
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+
+```
+
+
+# project random number
+
+```javascript
+
+
+```
