@@ -7,6 +7,23 @@
 </head>
 <body>
     <h1>Cal Tech</h1>
-    <button> Stop </button>
+    <button id="stop"> Stop </button>
 </body>
+<script>
+    const printCaliber = function(){      //setTimeout and setInterval are webAPI function
+        console.log("caliber")
+    }
+    // setTimeout(printCaliber,2000)  
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Javascript learning"
+    }
+    const changeMe = setTimeout(changeText,3000)
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stopped")
+    })
+
+
+</script>
 </html>
