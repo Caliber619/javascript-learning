@@ -7,13 +7,22 @@
 </head>
 <body>
     <h1> Cali Technium </h1>
-    <button id="start">  </button>
+    <button id="start"> Start </button>
     <button id="stop"> Stop </button>
 </body>
 <script>
+    const printDate = function(str){
+        console.log("kshitij",Date.now(),str)
+    }
 
-    setInterval(function(){
-
-    },1000)
+    document.querySelector("#start").addEventListener('click',function(){
+        const intervalId = setInterval(printDate,1000,"hi")
+        document.querySelector("#stop").addEventListener('click',function(){
+        clearInterval(intervalId)
+        })
+    })
+    // document.querySelector("#stop").addEventListener('click',function(){
+    //     clearInterval(intervalId)
+    // })
 </script>
 </html>
