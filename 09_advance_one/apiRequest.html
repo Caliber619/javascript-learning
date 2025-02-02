@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    <h3 style="color: teal;">
+        <p> 0	UNSENT	Client has been created. open() not called yet. <br>
+            1	OPENED	open() has been called. <br>
+            2	HEADERS_RECEIVED	send() has been called, and headers and status are available. <br>
+            3	LOADING	Downloading; responseText holds partial data. <br>
+            4	DONE	The operation is complete.
+
+        </p>
+    </h3>
+    <br>
+    
+    <!-- .....................................basic card assignment -->
+    <!-- <img id="image" src="" alt=""><br>
+    <h3>
+        Followers: <p id="follower"></p>
+    </h3>
+    <button id="button">
+        Get PFP
+    </button> -->
+    <!-- .....................................basic card assignment -->
+
+</body>
+<script>
+    const requestURL = 'https://api.github.com/users/Caliber619'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET',requestURL)
+    //if we want to see the state changing
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);  //this will print the state
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)     //to get the data from reponse and because it comes in string we need to parse it in json(obj format)
+            console.log(data)
+            console.log(typeof data)
+            console.log(data.followers)
+
+            // // basic card ---- assignment
+            // const followers1 = data.followers
+            // const myButton = document.getElementById('button')
+            // const mypfp = document.getElementById('image')
+            // const followers = document.getElementById('follower')
+            // myButton.addEventListener('click',function(){
+            //     mypfp.setAttribute('src',data.avatar_url)
+            //     followers.innerHTML = followers1
+            // })
+            //basic card ---- assignment
+        }
+    }
+    xhr.send()
+
+    
+</script>
+</html>
